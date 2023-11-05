@@ -51,6 +51,12 @@ plugins:
           options:
             annotations_path: brief
             docstring_style: google
+  - mkdocs-jupyter:
+      execute: true
+      allow_errors: true
+      include_source: true
+      show_input: true
+      no_input: false
 
 extra:
   generator: false
