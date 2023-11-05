@@ -1,0 +1,18 @@
+# IDE settings
+.vscode/
+.idea/
+
+# Doc builds
+source/_build
+html
+source/doc
+
+# psi4
+timer.dat
+psi.*.clean
+
+.venv
+
+.obsidian/*
+.mypy_cache
+site
