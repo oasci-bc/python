@@ -1,6 +1,6 @@
 SHELL := /usr/bin/env bash
-PYTHON_VERSION := 3.12
-PYTHON_VERSION_CONDENSED := 312
+PYTHON_VERSION := 3.11
+PYTHON_VERSION_CONDENSED := 311
 PACKAGE_NAME := python-bc
 REPO_PATH := $(shell git rev-parse --show-toplevel)
 CONDA_NAME := $(PACKAGE_NAME)-dev

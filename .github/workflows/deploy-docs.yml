@@ -30,7 +30,7 @@ jobs:
         with:
           miniconda-version: "latest"
           auto-update-conda: true
-          python-version: "3.12"
+          python-version: "3.11"
 
       - name: Build environment
         run: make refresh
