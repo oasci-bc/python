@@ -129,8 +129,8 @@ serve:
 	echo "Served at http://127.0.0.1:8910/"
 	$(CONDA) mkdocs serve -a localhost:8910
 
-.PHONY: build-docs
-build-docs:
+.PHONY: docs
+docs:
 	$(CONDA) mkdocs build
 
 .PHONY: open-docs
