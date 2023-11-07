@@ -23,7 +23,7 @@ git push --follow-tags
 ## License
 
 Code contained in this project is released under the [MIT License](https://spdx.org/licenses/MIT.html) as specified in [`LICENSE_CODE`](https://github.com/oasci/python-bc/blob/main/LICENSE_CODE.md).
-This license grants you the freedom to use, modify, and distribute it as long as you include the original copyright notice contained in LICENSE.md and the following notice.
+This license grants you the freedom to use, modify, and distribute it as long as you include the original copyright notice contained in [`LICENSE_CODE`](https://github.com/oasci/python-bc/blob/main/LICENSE_CODE.md) and the following notice.
 
 > Portions of this code were incorporated and adapted with permission from [python-bc](https://github.com/oasci/python-bc) by OASCI licensed under the [MIT license](https://github.com/oasci/python-bc/blob/main/LICENSE_CODE.md).
 
