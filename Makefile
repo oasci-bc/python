@@ -126,8 +126,8 @@ cleanup: pycache-remove dsstore-remove mypycache-remove ipynbcheckpoints-remove 
 
 .PHONY: serve
 serve:
-	echo "Served at http://127.0.0.1:8910/"
-	$(CONDA) mkdocs serve -a localhost:8910
+	echo "Served at http://127.0.0.1:8000/"
+	$(CONDA) mkdocs serve
 
 .PHONY: docs
 docs:
