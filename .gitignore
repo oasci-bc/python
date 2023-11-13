@@ -15,4 +15,4 @@ psi.*.clean
 
 .obsidian/*
 .mypy_cache
-site
+public/

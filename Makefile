@@ -9,6 +9,9 @@ DOCS_URL := https://python-bc.oasci.org
 
 ###   ENVIRONMENT   ###
 
+# See https://github.com/pypa/pip/issues/7883#issuecomment-643319919
+export PYTHON_KEYRING_BACKEND := keyring.backends.null.Keyring
+
 .PHONY: conda-create
 conda-create:
 	- conda deactivate
@@ -57,8 +60,8 @@ poetry-lock:
 install:
 	$(CONDA) poetry install --no-interaction --no-root
 
-.PHONY: refresh
-refresh: conda-create from-conda-lock pre-commit-install install
+.PHONY: environment
+environment: conda-create from-conda-lock pre-commit-install install
 
 .PHONY: refresh-locks
 refresh-locks: conda-create conda-setup conda-dependencies conda-lock pre-commit-install poetry-lock install
@@ -126,17 +129,13 @@ cleanup: pycache-remove dsstore-remove mypycache-remove ipynbcheckpoints-remove 
 
 .PHONY: serve
 serve:
-	echo "Served at http://127.0.0.1:8000/"
-	$(CONDA) mkdocs serve
+	echo "Served at http://127.0.0.1:8910/"
+	$(CONDA) mkdocs serve -a localhost:8910
 
 .PHONY: docs
 docs:
-	$(CONDA) mkdocs build
+	$(CONDA) mkdocs build -d public/
 
 .PHONY: open-docs
 open-docs:
-	xdg-open ./site/index.html 2>/dev/null
-
-.PHONY: deploy-docs
-deploy-docs:
-	$(CONDA) mkdocs gh-deploy --force
+	xdg-open public/index.html 2>/dev/null
