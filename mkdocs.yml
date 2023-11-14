@@ -65,7 +65,8 @@ extra:
     domain: python-bc
 
 extra_css:
-  - stylesheets/extra.css
+  - css/base.css
+  - css/colors.css
 
 extra_javascript:
   - javascripts/mathjax.js
