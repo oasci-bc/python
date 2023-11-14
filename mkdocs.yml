@@ -12,6 +12,18 @@ theme:
   name: material
   custom_dir: docs/overrides
   language: en
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: dark
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
   font:
     text: Roboto
     code: Roboto Mono
