@@ -69,6 +69,7 @@ plugins:
       include_source: true
       show_input: true
       no_input: false
+  - awesome-pages
 
 extra:
   generator: false

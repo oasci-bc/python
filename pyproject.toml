@@ -9,6 +9,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+mkdocs-awesome-pages-plugin = "^2.9.2"
 
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.5.3"
