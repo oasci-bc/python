@@ -1,4 +1,4 @@
-<h1 align="center">Python - Breadcrumbs</h1>
+# Python Breadcrumbs
 
 TODO:
 
@@ -22,12 +22,12 @@ git push --follow-tags
 
 ## License
 
-Code contained in this project is released under the [MIT License](https://spdx.org/licenses/MIT.html) as specified in [`LICENSE_CODE`](https://gitlab.com/oasci/python-bc/blob/main/LICENSE_CODE.md).
-This license grants you the freedom to use, modify, and distribute it as long as you include the original copyright notice contained in [`LICENSE_CODE`](https://gitlab.com/oasci/python-bc/blob/main/LICENSE_CODE.md) and the following notice.
+Code contained in this project is released under the [MIT License](https://spdx.org/licenses/MIT.html) as specified in [`LICENSE_CODE`](https://gitlab.com/oasci/learning/python-bc/-/blob/main/LICENSE_CODE.md).
+This license grants you the freedom to use, modify, and distribute it as long as you include the original copyright notice contained in [`LICENSE_CODE`](https://gitlab.com/oasci/learning/python-bc/-/blob/main/LICENSE_CODE.md) and the following notice.
 
-> Portions of this code were incorporated and adapted with permission from [python-bc](https://gitlab.com/oasci/python-bc) by OASCI licensed under the [MIT license](https://gitlab.com/oasci/python-bc/blob/main/LICENSE_CODE.md).
+> Portions of this code were incorporated and adapted with permission from [Python Breadcrumbs](https://gitlab.com/oasci/python-bc) by OASCI licensed under the [MIT license](https://gitlab.com/oasci/learning/python-bc/-/blob/main/LICENSE_CODE.md).
 
-All other data, information, documentation, and associated content provided within this project are released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) as specified in [`LICENSE_INFO`](https://gitlab.com/oasci/python-bc/blob/main/LICENSE_INFO.md).
+All other data, information, documentation, and associated content provided within this project are released under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) as specified in [`LICENSE_INFO`](https://gitlab.com/oasci/learning/python-bc/-/blob/main/LICENSE_INFO.md).
 This means you are free to share and adapt the non-code elements, but you must give appropriate credit to the original source and indicate if changes were made.
 
-> Some content was incorporated and adapted with permission [python-bc](https://gitlab.com/oasci/python-bc) by OASCI licensed under the [CC BY 4.0 license](https://gitlab.com/oasci/python-bc/blob/main/LICENSE_INFO.md)
+> Some content was incorporated and adapted with permission [Python Breadcrumbs](https://gitlab.com/oasci/python-bc) by OASCI licensed under the [CC BY-SA 4.0 license](https://gitlab.com/oasci/learning/python-bc/-/blob/main/LICENSE_INFO.md)
