@@ -3,14 +3,13 @@ docs_dir: docs
 site_name: Python - Breadcrumbs
 site_author: OASCI
 
-# Github
-repo_name: oasci/python-bc
-repo_url: https://gitlab.com/oasci/python-bc
+repo_name: oasci/breadcrumbs/python-bc
+repo_url: https://gitlab.com/oasci/breadcrumbs/python-bc
 
 # https://squidfunk.github.io/mkdocs-material/
 theme:
   name: material
-  custom_dir: docs/overrides
+  custom_dir: docs/.overrides
   language: en
   palette:
     # Palette toggle for light mode
@@ -69,7 +68,12 @@ plugins:
       include_source: true
       show_input: true
       no_input: false
-  - awesome-pages
+  - awesome-pages:
+        collapse_single_pages: true
+        strict: false
+        order: asc
+        sort_type: natural
+        order_by: title
 
 extra:
   generator: false
