@@ -2,10 +2,8 @@ SHELL := /usr/bin/env bash
 PYTHON_VERSION := 3.11
 PYTHON_VERSION_CONDENSED := 311
 PACKAGE_NAME := python-bc
-REPO_PATH := $(shell git rev-parse --show-toplevel)
 CONDA_NAME := $(PACKAGE_NAME)-dev
 CONDA := conda run -n $(CONDA_NAME)
-DOCS_URL := https://python-bc.oasci.org
 
 ###   ENVIRONMENT   ###
 
@@ -33,18 +31,23 @@ conda-setup:
 conda-dependencies:
 	echo "No conda-only packages are required."
 
+.PHONY: nodejs-dependencies
+nodejs-dependencies:
+	$(CONDA) conda install -y -c conda-forge nodejs
+	$(CONDA) npm install markdownlint-cli2 --global
+
 .PHONY: conda-lock
 conda-lock:
-	- rm $(REPO_PATH)/conda-lock.yml
+	- rm conda-lock.yml
 	$(CONDA) conda env export --from-history | grep -v "^prefix" > environment.yml
-	$(CONDA) conda-lock -f environment.yml -p linux-64 -p osx-64 -p win-64
-	rm $(REPO_PATH)/environment.yml
-	$(CONDA) cpl-deps $(REPO_PATH)/pyproject.toml --env_name $(CONDA_NAME)
+	$(CONDA) conda-lock -f environment.yml $(CONDA_LOCK_OPTIONS)
+	rm environment.yml
+	$(CONDA) cpl-deps pyproject.toml --env_name $(CONDA_NAME)
 	$(CONDA) cpl-clean --env_name $(CONDA_NAME)
 
 .PHONY: from-conda-lock
 from-conda-lock:
-	$(CONDA) conda-lock install -n $(CONDA_NAME) $(REPO_PATH)/conda-lock.yml
+	$(CONDA) conda-lock install -n $(CONDA_NAME) conda-lock.yml
 	$(CONDA) cpl-clean --env_name $(CONDA_NAME)
 
 .PHONY: pre-commit-install
@@ -63,34 +66,21 @@ install:
 .PHONY: environment
 environment: conda-create from-conda-lock pre-commit-install install
 
-.PHONY: refresh-locks
-refresh-locks: conda-create conda-setup conda-dependencies conda-lock pre-commit-install poetry-lock install
+.PHONY: locks
+locks: conda-create conda-setup conda-dependencies nodejs-dependencies conda-lock pre-commit-install poetry-lock install
 
 
 ###   FORMATTING   ###
 
 .PHONY: validate
 validate:
+	- $(CONDA) markdownlint-cli2-fix docs/*
 	- $(CONDA) pre-commit run --all-files
 
 .PHONY: formatting
 formatting:
-	- $(CONDA) isort ./
+	- $(CONDA) isort --settings-path pyproject.toml ./
 	- $(CONDA) black --config pyproject.toml ./
-
-
-
-
-###   LINTING   ###
-
-.PHONY: check-codestyle
-check-codestyle:
-	$(CONDA) isort --diff --check-only $(REPO_PATH)
-	$(CONDA) black --diff --check --config pyproject.toml $(REPO_PATH)
-	$(CONDA) pylint --recursive=y --rcfile pyproject.toml $(REPO_PATH)
-
-.PHONY: lint
-lint: check-codestyle
 
 
 
@@ -127,10 +117,26 @@ cleanup: pycache-remove dsstore-remove mypycache-remove ipynbcheckpoints-remove 
 
 ###   MKDOCS   ###
 
+mkdocs_port := $(shell \
+	start_port=3000; \
+	max_attempts=100; \
+	for i in $$(seq 0 $$(($$max_attempts - 1))); do \
+		current_port=$$(($$start_port + i)); \
+		if ! lsof -i :$$current_port > /dev/null; then \
+			echo $$current_port; \
+			break; \
+		fi; \
+		if [ $$i -eq $$(($$max_attempts - 1)) ]; then \
+			echo "Error: Unable to find an available port after $$max_attempts attempts."; \
+			exit 1; \
+		fi; \
+	done \
+)
+
 .PHONY: serve
 serve:
-	echo "Served at http://127.0.0.1:8910/"
-	$(CONDA) mkdocs serve -a localhost:8910
+	echo "Served at http://127.0.0.1:$(mkdocs_port)/"
+	$(CONDA) mkdocs serve -a localhost:$(mkdocs_port)
 
 .PHONY: docs
 docs:
