@@ -33,14 +33,18 @@ theme:
     - content.code.annotate
     - content.code.copy
     - content.code.select
+    - content.tooltips
+    - content.tabs.link
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.tracking
     - navigation.top
     - navigation.indexes
     - navigation.path
+    - navigation.prune
     - toc.follow
     - search.suggest
 
@@ -63,11 +67,9 @@ plugins:
             annotations_path: brief
             docstring_style: google
   - mkdocs-jupyter:
-      execute: true
-      allow_errors: true
-      include_source: true
-      show_input: true
-      no_input: false
+        no_input: False
+        include_requirejs: true
+        include_source: True
   - awesome-pages:
         collapse_single_pages: true
         strict: false
@@ -86,7 +88,7 @@ extra_css:
   - css/colors.css
 
 extra_javascript:
-  - javascripts/mathjax.js
+  - js/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 

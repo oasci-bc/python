@@ -140,6 +140,7 @@ serve:
 
 .PHONY: docs
 docs:
+	- rm -rf public/
 	$(CONDA) mkdocs build -d public/
 
 .PHONY: open-docs
