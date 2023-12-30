@@ -1,4 +1,9 @@
 nav:
     - index.md
+    - Python Software Foundation: psf
+    - Kaggle: kaggle.md
+    - Google: google.md
+    - Ultimate python: ultimate
+    - Learn Python in Y minutes: learn-python-y-minutes
     - Byte of Python: byte-of-python
     - Think Python: think-python

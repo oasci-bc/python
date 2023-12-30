@@ -1,0 +1,6 @@
+nav:
+    - index.md
+    - Syntax: syntax
+    - Data structures: data_structures
+    - Classes: classes
+    - Advanced: advanced

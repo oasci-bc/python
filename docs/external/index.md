@@ -1,16 +1,5 @@
 # External references
 
-Many Open Educational Resources were used to inspire Python Breadcrumbs.
-Still, the original sources may still be beneficial for you.
-We include these here with the help of the following tools.
-
-- [nougat](https://github.com/facebookresearch/nougat)
-- [pdffigures2](https://github.com/allenai/pdffigures2)
-
-## PDF to markdown
-
-We convert PDFs to markdown using the following command.
-
-```bash
-nougat path/to/file.pdf --no-skipping -o output_directory -m 0.1.0-base
-```
+We are not trying to reinvent the wheel here.
+However, one of the primary roadblocks to learning almost any topics is finding resources and then judging if they are high quality.
+Resources that are under an open-source license are reproduced here with appropriate acknowledgements.
