@@ -5,6 +5,8 @@ site_author: OASCI
 
 repo_name: oasci/breadcrumbs/python-bc
 repo_url: https://gitlab.com/oasci/breadcrumbs/python-bc
+edit_uri: -/edit/main/python-bc
+copyright: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> by OASCI
 
 # https://squidfunk.github.io/mkdocs-material/
 theme:
@@ -30,6 +32,8 @@ theme:
     repo: fontawesome/brands/gitlab
     annotation: material/star-four-points-circle
   features:
+    # - content.action.edit
+    # - content.action.view
     - content.code.annotate
     - content.code.copy
     - content.code.select
@@ -70,6 +74,9 @@ plugins:
         no_input: False
         include_requirejs: true
         include_source: True
+        remove_tag_config:
+            remove_input_tags:
+                - hide_code
   - awesome-pages:
         collapse_single_pages: true
         strict: false
@@ -77,15 +84,30 @@ plugins:
         sort_type: natural
         order_by: title
 
+hooks:
+  - hooks/launchy.py
+colab_base_url: https://colab.research.google.com/github/oasci/python-bc/blob/main/docs
+
 extra:
   generator: false
   analytics:
     provider: plausible
-    domain: python-bc
+    domain: python.oasci.org
+  social:
+    - icon: fontawesome/brands/gitlab
+      link: https://gitlab.com/oasci
+      name: OASCI on GitLab
+    - icon: fontawesome/brands/github
+      link: https://github.com/oasci
+      name: OASCI on GitHub
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:us@oasci.org
 
 extra_css:
   - css/base.css
   - css/colors.css
+  - css/progress.css
+  - css/launchy.css
 
 extra_javascript:
   - js/mathjax.js
@@ -124,3 +146,6 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
