@@ -1,9 +1,10 @@
 SHELL := /usr/bin/env bash
-PYTHON_VERSION := 3.11
-PYTHON_VERSION_CONDENSED := 311
+PYTHON_VERSION := 3.12.1
+PYTHON_VERSION_CONDENSED := 312
 PACKAGE_NAME := python-bc
 CONDA_NAME := $(PACKAGE_NAME)-dev
 CONDA := conda run -n $(CONDA_NAME)
+CONDA_LOCK_OPTIONS := -p linux-64 --channel conda-forge
 
 ###   ENVIRONMENT   ###
 
@@ -15,7 +16,7 @@ conda-create:
 	- conda deactivate
 	conda remove -y -n $(CONDA_NAME) --all
 	conda create -y -n $(CONDA_NAME)
-	$(CONDA) conda install -y python=$(PYTHON_VERSION)
+	$(CONDA) conda install -y -c conda-forge python=$(PYTHON_VERSION)
 	$(CONDA) conda install -y conda-lock
 
 # Default packages that we always need.
@@ -29,11 +30,10 @@ conda-setup:
 # Conda-only packages specific to this project.
 .PHONY: conda-dependencies
 conda-dependencies:
-	echo "No conda-only packages are required."
+	$(CONDA) conda install -y -c conda-forge nodejs
 
 .PHONY: nodejs-dependencies
 nodejs-dependencies:
-	$(CONDA) conda install -y -c conda-forge nodejs
 	$(CONDA) npm install markdownlint-cli2 --global
 
 .PHONY: conda-lock
@@ -41,7 +41,6 @@ conda-lock:
 	- rm conda-lock.yml
 	$(CONDA) conda env export --from-history | grep -v "^prefix" > environment.yml
 	$(CONDA) conda-lock -f environment.yml $(CONDA_LOCK_OPTIONS)
-	rm environment.yml
 	$(CONDA) cpl-deps pyproject.toml --env_name $(CONDA_NAME)
 	$(CONDA) cpl-clean --env_name $(CONDA_NAME)
 
@@ -64,24 +63,35 @@ install:
 	$(CONDA) poetry install --no-interaction --no-root
 
 .PHONY: environment
-environment: conda-create from-conda-lock pre-commit-install install
+environment: conda-create from-conda-lock pre-commit-install nodejs-dependencies install
 
 .PHONY: locks
-locks: conda-create conda-setup conda-dependencies nodejs-dependencies conda-lock pre-commit-install poetry-lock install
+locks: conda-create conda-setup conda-dependencies conda-lock pre-commit-install poetry-lock nodejs-dependencies install
 
 
 ###   FORMATTING   ###
 
 .PHONY: validate
 validate:
-	- $(CONDA) markdownlint-cli2-fix docs/*
-	- $(CONDA) pre-commit run --all-files
+	$(CONDA) markdownlint-cli2-fix biosc1540/*
+	$(CONDA) pre-commit run --all-files
 
 .PHONY: formatting
 formatting:
 	- $(CONDA) isort --settings-path pyproject.toml ./
 	- $(CONDA) black --config pyproject.toml ./
 
+
+###   LINTING   ###
+
+.PHONY: check-codestyle
+check-codestyle:
+	$(CONDA) isort --diff --check-only $(REPO_PATH)
+	$(CONDA) black --diff --check --config pyproject.toml $(REPO_PATH)
+	$(CONDA) pylint --recursive=y --rcfile pyproject.toml $(REPO_PATH)
+
+.PHONY: lint
+lint: check-codestyle
 
 
 ###   CLEANING   ###
