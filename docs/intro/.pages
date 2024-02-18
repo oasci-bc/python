@@ -1,0 +1,3 @@
+nav:
+  - 0 Introduction: index.md
+  - 0.1 Running Python: run

@@ -1,0 +1,5 @@
+nav:
+    - 3.0 Working with data: index.md
+    - Data pipeline: pipeline.md
+    - numpy.ipynb
+    - pandas.ipynb
