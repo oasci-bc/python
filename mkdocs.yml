@@ -3,9 +3,8 @@ docs_dir: docs
 site_name: Python - Breadcrumbs
 site_author: OASCI
 
-repo_name: oasci/breadcrumbs/python-bc
-repo_url: https://gitlab.com/oasci/breadcrumbs/python-bc
-edit_uri: -/edit/main/python-bc
+repo_name: oasci-bc/python
+repo_url: https://gitlab.com/oasci-bc/python
 copyright: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> by OASCI
 
 # https://squidfunk.github.io/mkdocs-material/
@@ -29,11 +28,9 @@ theme:
     text: Roboto
     code: Roboto Mono
   icon:
-    repo: fontawesome/brands/gitlab
+    repo: fontawesome/brands/github
     annotation: material/star-four-points-circle
   features:
-    # - content.action.edit
-    # - content.action.view
     - content.code.annotate
     - content.code.copy
     - content.code.select
@@ -73,7 +70,7 @@ plugins:
   - mkdocs-jupyter:
         no_input: False
         include_requirejs: true
-        include_source: True
+        include_source: false
         remove_tag_config:
             remove_input_tags:
                 - hide_code
@@ -86,7 +83,7 @@ plugins:
 
 hooks:
   - hooks/launchy.py
-colab_base_url: https://colab.research.google.com/github/oasci/python-bc/blob/main/docs
+colab_base_url: https://colab.research.google.com/github/oasci-bc/python/blob/main/docs
 
 extra:
   generator: false
@@ -111,7 +108,6 @@ extra_css:
 
 extra_javascript:
   - js/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 markdown_extensions:

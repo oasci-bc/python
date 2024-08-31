@@ -1,8 +1,8 @@
 nav:
   - Home: index.md
-  - 0.0 Introduction: intro
-  - 1.0 Basics: basics
-  - 2.0 Object oriented: oo
-  - 3.0 Working with data: data
-  - 4.0 Plotting: plotting
+  - Introduction: intro
+  - Basics: basics
+  - Object oriented: oo
+  - Working with data: data
+  - Plotting: plotting
   - External: external
