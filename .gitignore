@@ -16,4 +16,8 @@ psi.*.clean
 .obsidian/*
 .mypy_cache
 public/
-.pyc
+*.pyc
+
+# pixi environments
+.pixi
+*.egg-info
