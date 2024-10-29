@@ -1,16 +1,15 @@
 # Set the default behavior, in case people don't have core.autocrlf set.
 * text=auto
-
 # Explicitly declare text files you want to always be normalized and converted
 # to native line endings on checkout.
 *.md text
 *.rst text
-
 # Denote all files that are truly binary and should not be modified.
 *.png binary
 *.jpg binary
-
 *.zip filter=lfs diff=lfs merge=lfs -text
 *.csv filter=lfs diff=lfs merge=lfs -text
 *.npy filter=lfs diff=lfs merge=lfs -text
 pixi.lock linguist-language=YAML linguist-generated=true
+docs/files/npy/steamboat-willie.npy filter=lfs diff=lfs merge=lfs -text
+docs/files/npy/steamboat-willie.gif filter=lfs diff=lfs merge=lfs -text
