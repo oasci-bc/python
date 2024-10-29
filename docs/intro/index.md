@@ -1,3 +1,3 @@
-# 0 Introduction
+# Introduction
 
 TODO:
