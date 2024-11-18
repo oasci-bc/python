@@ -4,7 +4,6 @@ them is difficult but Python provides a package for us to use them easily.
 This module shows a few examples of how to use the `re` package to search
 predefined text snippets stored in module-level constants.
 
-
 ```python
 import re
 

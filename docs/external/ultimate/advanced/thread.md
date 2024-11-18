@@ -8,8 +8,8 @@ reading the code below.
 
 Here are some resources to learn more about threads:
 
-https://realpython.com/intro-to-python-threading/
-https://docs.python.org/3/library/threading.html
+<https://realpython.com/intro-to-python-threading/>
+<https://docs.python.org/3/library/threading.html>
 
 Python threads are not suitable for CPU-heavy tasks in the CPython
 interpreter due to the GIL. To address this, we typically resort to
@@ -17,9 +17,8 @@ forking processes or running C externally.
 
 Here are some resources to learn more about the GIL:
 
-https://realpython.com/python-gil/
-https://wiki.python.org/moin/GlobalInterpreterLock
-
+<https://realpython.com/python-gil/>
+<https://wiki.python.org/moin/GlobalInterpreterLock>
 
 ```python
 import time

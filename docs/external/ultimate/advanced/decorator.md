@@ -4,7 +4,6 @@ This module shows how a simple "encryption" function for one string can
 be decorated to work with a collection of strings. Note that the decorator
 handles nested collections with the use of recursion.
 
-
 ```python
 from functools import wraps
 

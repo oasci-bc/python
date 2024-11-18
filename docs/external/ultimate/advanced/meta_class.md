@@ -3,7 +3,6 @@ Metaclass are used to modify a class as it is being created at runtime.
 This module shows how a metaclass can add database attributes and tables
 to "logic-free" model classes for the developer.
 
-
 ```python
 from abc import ABC
 

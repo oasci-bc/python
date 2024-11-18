@@ -3,7 +3,6 @@ A class is made up of methods and state. This allows code and data to be
 combined as one logical entity. This module defines a basic car class,
 creates a car instance and uses it for demonstration purposes.
 
-
 ```python
 from inspect import isfunction, ismethod, signature
 

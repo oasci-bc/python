@@ -4,7 +4,6 @@ This module defines an employee iterator class that iterates through each
 employee in a hierarchy one-by-one. This module also shows how a similar
 approach can be achieved with a generator function.
 
-
 ```python
 # Module-level constants
 _ITERATION_MESSAGE = "Cyclic loop detected"

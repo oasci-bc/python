@@ -40,26 +40,6 @@ ruff = ">=0.7.1,<0.8"
 bump-my-version = ">=0.27.0,<0.28"
 
 [tool.pixi.tasks]
-mdlint = { cmd = ["markdownlint-cli2", '"**/*.{md,markdown}"', "--fix", "--config", ".markdownlint.yaml", "||", "true"] }
-isort = { cmd = ["isort", "--settings-path", "pyproject.toml", "./content"] }
-black = { cmd = ["black", "--config", "pyproject.toml", "./content"] }
-format = { depends-on = ["mdlint", "isort", "black"] }
-docs = { cmd = ["rm", "-rf", "./public/", "&&", "mkdocs", "build", "-d", "public/"] }
-serve = { cmd = ["mkdocs", "serve"] }
-
-[tool.bumpversion]
-current_version = "2023.10.29"
-tag = true
-commit = true
-
-[tool.poetry-dynamic-versioning]
-enable = true
-vcs = "git"
-format-jinja = "{%- if distance == 0 -%}{{ serialize_pep440(base) }}{%- else -%}{{ serialize_pep440(base, post=distance) }}{%- endif -%}"
-
-[build-system]
-requires = [
-    "poetry-core>=1.0.0",
-    "poetry-dynamic-versioning>=1.0.0,<2.0.0",
-]
-build-backend = "poetry_dynamic_versioning.backend"
+docs = { cmd = ["mkdocs", "build", "-d", "public/", "--clean"] }
+docs-cache = { cmd = ["mkdocs", "build", "-d", "public/"] }
+serve = { cmd = ["mkdocs", "serve", "-a", "localhost:29847", "--open", "--dirty"] }

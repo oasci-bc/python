@@ -5,7 +5,6 @@ Benchmarking is an approach that helps developers use profiling metrics
 and their code intuition to optimize programs further. This module uses
 cProfile to compare the performance of two functions with each other.
 
-
 ```python
 import cProfile
 import io

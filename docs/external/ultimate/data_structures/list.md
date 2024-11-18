@@ -4,7 +4,6 @@ Lists are a sequence of values that can be modified at runtime. This
 module shows how lists are created, iterated, accessed, extended
 and shortened.
 
-
 ```python
 def main():
     # This is a list of strings where

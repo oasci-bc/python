@@ -1,0 +1,6 @@
+nav:
+  - Colab: index.md
+  - Opening files: opening-files
+  - Cells: cells
+  - Kernel: kernel
+  - Reproducibility: reproducibility

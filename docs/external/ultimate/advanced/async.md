@@ -5,7 +5,6 @@ jobs. In the real world, it takes time for a scheduler to start a job (i.e.
 hit an API endpoint, ask the operating system for resources) so we assume
 that starting a job has some intrinsic delay.
 
-
 ```python
 import asyncio
 from dataclasses import dataclass

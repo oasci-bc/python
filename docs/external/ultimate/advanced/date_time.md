@@ -9,19 +9,18 @@ personal device. Once we use `datetime` objects for web applications that
 are deployed globally, it's important to know the offset that `datetime`
 objects are aligned to before processing them. For more on `datetime`:
 
-https://docs.python.org/3/library/datetime.html
+<https://docs.python.org/3/library/datetime.html>
 
 Backend developers address this by storing time fields with offsets aligned
 with the UTC (Coordinated Universal Time) timezone. As a result, time fields
 can be displayed in any timezone - at any moment. For more on UTC:
 
-https://en.wikipedia.org/wiki/Coordinated_Universal_Time
+<https://en.wikipedia.org/wiki/Coordinated_Universal_Time>
 
 In this module, we will show the difference between offset-naive and
 offset-aware `datetime` objects. We will also highlight the builtin
 UTC timezone and show how it can be used to make the default `datetime`
 object more powerful.
-
 
 ```python
 from datetime import datetime, timezone

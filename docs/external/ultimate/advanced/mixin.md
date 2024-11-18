@@ -5,7 +5,6 @@ module, we have one request handler interface and two request handler
 mixins to illustrate how mixins can make our lives easier when defining
 concrete classes.
 
-
 ```python
 from abc import ABC, abstractmethod
 from dataclasses import dataclass

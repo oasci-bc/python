@@ -4,7 +4,6 @@ to determine which method will be run by a class instance. This module
 shows how the MRO is useful for the classic diamond problem where classes
 B and C depend on class A, and class D depends on classes B and C.
 
-
 ```python
 class BasePlayer:
     """Base player."""

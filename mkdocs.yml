@@ -54,23 +54,16 @@ validation:
   absolute_links: warn
   unrecognized_links: warn
 
-# Options need to be indented twice for some reason?
 plugins:
   - search
   - autorefs
   - material-plausible
   - table-reader
-  - mkdocstrings:
-      handlers:
-        python:
-          paths: ["python-bc"]
-          options:
-            annotations_path: brief
-            docstring_style: google
   - mkdocs-jupyter:
         no_input: False
         include_requirejs: true
         include_source: false
+        execute: false
         remove_tag_config:
             remove_input_tags:
                 - hide_code

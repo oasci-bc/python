@@ -7,7 +7,6 @@ Python provides various ways to work with files. We can use the
 builtin 'open' function to open files in different modes like
 reading ('r'), writing ('w'), and appending ('a').
 
-
 ```python
 import os
 
