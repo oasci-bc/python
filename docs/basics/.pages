@@ -1,6 +1,5 @@
 nav:
     - index.md
-    - colab.md
     - Printing: printing
     - Comments: comments
     - Arithmetic: arithmetic
