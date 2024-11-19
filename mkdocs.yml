@@ -73,6 +73,11 @@ plugins:
         order: asc
         sort_type: natural
         order_by: title
+  - glightbox:
+      zoomable: true
+      draggable: false
+      height: 70vh
+      width: auto
 
 hooks:
   - hooks/launchy.py
