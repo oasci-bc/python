@@ -42,4 +42,4 @@ bump-my-version = ">=0.27.0,<0.28"
 [tool.pixi.tasks]
 docs = { cmd = ["mkdocs", "build", "-d", "public/", "--clean"] }
 docs-cache = { cmd = ["mkdocs", "build", "-d", "public/"] }
-serve = { cmd = ["mkdocs", "serve", "-a", "localhost:29847", "--open", "--dirty"] }
+serve = { cmd = ["mkdocs", "serve", "-a", "localhost:29847", "--dirty"] }
