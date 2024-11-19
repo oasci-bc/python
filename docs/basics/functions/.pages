@@ -1,3 +1,5 @@
 nav:
     - Functions: index.ipynb
-    - PySnack: pysnack.ipynb
+    - What are functions?: what.ipynb
+    - Function body: body.ipynb
+    - Calling functions: calling.ipynb
