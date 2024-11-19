@@ -96,6 +96,7 @@ extra_css:
   - css/progress.css
   - css/launchy.css
   - css/mkdocstrings.css
+  - css/jupyter.css
 
 extra_javascript:
   - js/mathjax.js
