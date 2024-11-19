@@ -1,0 +1,5 @@
+nav:
+    - Loops: index.ipynb
+    - Range: range.ipynb
+    - for: for.ipynb
+    - while: while.ipynb

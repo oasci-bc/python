@@ -8,5 +8,5 @@ nav:
     - Conditionals: conditionals
     - Collections: collections
     - Functions: functions
-    - loops.ipynb
+    - Loops: loops
     - libraries.ipynb
