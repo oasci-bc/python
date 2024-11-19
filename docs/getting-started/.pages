@@ -1,4 +1,4 @@
 nav:
-  - Introduction: index.md
+  - Getting started: index.md
   - Google Colab: colab
 #   - Running Python: run

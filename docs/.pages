@@ -1,6 +1,6 @@
 nav:
   - Home: index.md
-  - Introduction: intro
+  - Getting started: getting-started
   - Basics: basics
   - Object oriented: oo
   - Working with data: data
