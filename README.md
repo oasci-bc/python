@@ -3,32 +3,15 @@
 Breadcrumbs
 </h1>
 
-TODO:
+Welcome to **Python Breadcrumbs**, a centralized hub for open educational resources dedicated to learning scientific Python.
+Whether you're learning Python for the first time or refreshing your data analysis, modeling, or simulation skills, these resources are designed to empower you by making scientific computing accessible and intuitive.
 
 ## What is Breadcrumbs?
 
 Education stands as a pivotal force in socioeconomic mobility.
 Yet, generational barriers outside of an individual's influence hinder a person's access to educational opportunities.
-Breadcrumbs represents [OASCI's](https://www.oasci.org/) initiative to fundamentally transform access to educational materials, embodying the spirit of discovery and the sharing of knowledge fragments that have traditionally been accessible only through the goodwill of others.
+Breadcrumbs represents [OASCI's](https://www.oasci.org/) initiative to fundamentally transform access to educational materials, embodying the spirit of discovery and the sharing of knowledge fragments that have traditionally been exclusive to select groups.
 Breadcrumb websites are freely accessible resources, and we encourage contributions, improvements, and adaptations so long as they abide by the terms outlined in the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
-
-## Deploying
-
-We use [bump-my-version](https://github.com/callowayproject/bump-my-version) to release a new version.
-This will create a git tag that is used by [poetry-dynamic-version](https://github.com/mtkennerly/poetry-dynamic-versioning) to generate version strings.
-
-However, we are using [Calendar Versioning](https://calver.org/) which means we need to manually specify new versions.
-For example, to bump the version to November 8, 2024, you would run the following command after activating the relevant conda environment.
-
-```bash
-bump-my-version bump --new-version 2024.11.8
-```
-
-After releasing a new version, you need to push and include all tags.
-
-```bash
-git push --follow-tags
-```
 
 ## License
 
