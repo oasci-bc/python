@@ -1,9 +1,11 @@
 nav:
     - index.md
     - colab.md
-    - arithmetic.ipynb
+    - Display: display
+    - Comments: comments
+    - Arithmetic: arithmetic
     - Variables: variables
-    - data-types.ipynb
+    - Data types: data-types
     - collections.ipynb
     - functions.ipynb
     - conditionals.ipynb

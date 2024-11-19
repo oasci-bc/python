@@ -1,0 +1,6 @@
+nav:
+    - Data types: index.ipynb
+    - Numeric: numeric
+    - String: string.ipynb
+    - Boolean: bool.ipynb
+    - None: none.ipynb

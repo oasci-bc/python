@@ -1,0 +1,5 @@
+nav:
+    - Collections: index.ipynb
+    - List: list.ipynb
+    - Tuple: tuple.ipynb
+    - Dictionary: dict.ipynb

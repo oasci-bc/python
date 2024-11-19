@@ -1,0 +1,4 @@
+nav:
+    - Numeric: index.ipynb
+    - Int: int.ipynb
+    - Float: float.ipynb
