@@ -1,5 +1,5 @@
 nav:
-    - Working with data: index.md
+    - Data: index.md
     - Data pipeline: pipeline.md
-    - numpy.ipynb
+    - NumPy: numpy
     - pandas.ipynb

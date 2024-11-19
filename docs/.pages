@@ -2,7 +2,7 @@ nav:
   - Home: index.md
   - Getting started: getting-started
   - Basics: basics
-  - Object oriented: oo
-  - Working with data: data
+  - Objects: objects
+  - Data: data
   - Plotting: plotting
   - External: external
