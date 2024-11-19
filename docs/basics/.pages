@@ -6,8 +6,8 @@ nav:
     - Arithmetic: arithmetic
     - Variables: variables
     - Data types: data-types
-    - collections.ipynb
-    - functions.ipynb
-    - conditionals.ipynb
+    - Conditionals: conditionals
+    - Collections: collections
+    - Functions: functions
     - loops.ipynb
     - libraries.ipynb
