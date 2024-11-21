@@ -1,0 +1,10 @@
+nav:
+    - NumPy: index.ipynb
+    - Motivation: motivation.ipynb
+    - ndarray: ndarray.ipynb
+    - Data types: dtype.ipynb
+    - Dimensions: dimensions.ipynb
+    - Shape: shape.ipynb
+    - Initializing: initialize.ipynb
+    - Indexing: indexing.ipynb
+    - Loading: loading.ipynb
